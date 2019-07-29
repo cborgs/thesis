@@ -1,0 +1,64 @@
+1. OVERVIEW
+
+This command line application "mbtSearch" contains functions for loading
+sets of binary vectors (fingerprints) into a search tree and perform fast
+similarity matching. As measure of similarity can be applied as Tanimoto-
+or Hamming-Coefficient. The search tree's data structure and algorithms
+are based on a combination of 1DGrid, Symdex, Multibit Tree, Union Tree
+and XOR-folding as discribed in the articles referenced below.
+
+"mbtSearch" is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+"mbtSearch" is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with "mbtSearch". If not, see <http://www.gnu.org/licenses/>.
+
+2. COMPILATION
+
+The standalone version of multibitTree is provided with a simple makefile.
+Change into the folder where the source files and the "Makefile" are located
+and enter:
+
+	make
+
+The executable "mbtSearch" will be built.
+
+
+3. GETTING STARTET
+
+In order to print the built-in help enter:
+
+	./mbtSearch -h
+
+In order to run a simple test enter:
+
+	./mbtSearch -i test/AA.csv -m 0.95 test/BB.csv
+
+
+4. DETAILS
+
+Version: 2.0.1
+Date: 2016-05-10
+License: GPL-3
+Author: Markus Koetter, iQbis consulting GmbH
+Maintainer: Prof. Dr. Rainer Schnell <rainer.schnell@uni-due.de>
+
+5. References
+
+"A tree-based method for the rapid screening of chemical fingerprints"
+Thomas G Kristensen, Jesper Nielsen, Christian NS Pedersen
+Algorithms for Molecular Biology 2010
+http://almob.biomedcentral.com/articles/10.1186/1748-7188-5-9
+
+"SymDex: Increasing the Efficiency of Chemical Fingerprint Similarity
+Searches for Comparing Large Chemical Libraries by Using Query Set Indexing"
+David Tai and Jianwen Fang
+Applied Bioinformatics Laboratory, University of Kansas, Lawrence, Kansas 66047, United States,
+http://pubs.acs.org/doi/abs/10.1021/ci200606t
